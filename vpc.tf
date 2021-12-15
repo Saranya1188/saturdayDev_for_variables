@@ -16,7 +16,7 @@ resource "aws_internet_gateway" "igw" {
 }
 #subnet
 resource "aws_subnet" "subnet1" {
-  count                   = length(var.subnet_cidr)
+  #count                   = length(var.subnet_cidr)
   vpc_id                  = aws_vpc.prod-vpc.id
   cidr_block              = "20.0.1.0/24"
   availability_zone       = "us-east-2a"
